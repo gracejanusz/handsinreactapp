@@ -41,3 +41,36 @@
     transform: rotate(360deg);
   }
 }
+
+.page {
+  min-height: 100vh;
+}
+
+.page main {
+  padding: 20px;
+  text-align: center;
+}
+
+.simple-nav {
+  padding: 20px;
+  text-align: center;
+  background: #133470;
+  margin-bottom: 0; 
+  font-family: 'Trebuchet MS', serif;
+}
+
+.simple-nav a {
+  text-decoration: none;
+  color: #ecfbff;
+  margin: 0 10px;
+  font-size: 18px;
+  font-family: 'Trebuchet MS', serif;
+}
+
+.simple-nav a:hover {
+  text-decoration: underline;
+}
+
+.simple-nav span {
+  color: #61dafb;
+}

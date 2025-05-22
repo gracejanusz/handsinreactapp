@@ -8,33 +8,33 @@ import Blog from './Blog';
 import SignUp from './SignUp';
 
 function Home() {
-  return <h2>Welcome to HandsIn</h2>;
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p className='custom-font'>
+          A new way to learn.
+        </p>
+        <div className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/signup">Sign up</Link>
+        </div>
+      </header>
+    </div>
+  );
 }
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p className='custom-font'>
-            A new way to learn.
-          </p>
-          <div className="nav-links">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/signup">Sign up</Link>
-          </div>
-        </header>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/signup" element={<SignUp />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
     </Router>
   );
 }
