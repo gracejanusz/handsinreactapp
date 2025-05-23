@@ -1,20 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Footer from './components/Footer.jsx'
+import Navigation from './components/Navigation.jsx';
+import ProjectCard from './components/ProjectCard';
+import thumbImg from './images/100days.png'; 
+import HackteckImg from './images/HackTech.png';
+
 
 function Blog() {
   return (
     <div className="App">
-      <nav className="simple-nav">
-        <Link to="/">← Back to Home</Link>
-        <span> | </span>
-        <Link to="/about">About</Link>
-        <span> | </span>
-        <Link to="/signup">Sign Up</Link>
-      </nav>
+       <Navigation currentPage="blog" />
       <main className="App-header">
-        <h1>HandsIn Blog</h1>
-        <p className="custom-font">This is the Blog page - read our latest posts.</p>
+      <h1>Blog Posts</h1>
+      <ProjectCard
+        title="ILC 100 Days"
+        description="A showcase of real-time hand detection and gesture tracking using MediaPipe and Three.js."
+        date="May 2025"
+        thumbnail={thumbImg}
+        route="/blog/hand-detection"
+        color="#ecfbff"
+      />
+      <ProjectCard
+        title="HackTech"
+        description="A showcase of real-time hand detection and gesture tracking using MediaPipe and Three.js."
+        date="April 2025"
+        thumbnail={HackteckImg}
+        route="/blog/hand-detection"
+        color="#ecfbff"
+      />
       </main>
+      <Footer />
     </div>
   );
 }
