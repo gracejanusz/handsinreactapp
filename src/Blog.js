@@ -25,7 +25,7 @@ function Blog() {
         description="A showcase of real-time hand detection and gesture tracking using MediaPipe and Three.js."
         date="April 2025"
         thumbnail={HackteckImg}
-        route="/blog/hand-detection"
+        route="https://www.linkedin.com/posts/grace-janusz-301a88288_hacktech2025-activity-7325341937371078656-S5lO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEXtN7EBy7qbYjs4KxlwOmUqEweOQLc-vyk"
         color="#ecfbff"
       />
       </main>
