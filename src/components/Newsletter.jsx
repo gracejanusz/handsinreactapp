@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Mail, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import * as emailjs from '@emailjs/browser';
 
-
+console.log(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID); 
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+console.log(EMAILJS_SERVICE_ID); // Should print your service ID
 
 function NewsletterSignup() {
   const [email, setEmail] = useState('');
