@@ -14,10 +14,10 @@ function Blog() {
       <h1>Blog Posts</h1>
       <ProjectCard
         title="ILC 100 Days"
-        description="A showcase of real-time hand detection and gesture tracking using MediaPipe and Three.js."
+        description="How we won first place at UChicago's ILC Competition"
         date="May 2025"
         thumbnail={thumbImg}
-        route="/blog/hand-detection"
+        route="https://www.linkedin.com/posts/grace-janusz-301a88288_roughly-100-days-ago-marlena-leuz-aeliya-activity-7333592128213680128-CagA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEXtN7EBy7qbYjs4KxlwOmUqEweOQLc-vyk"
         color="#ecfbff"
       />
       <ProjectCard
