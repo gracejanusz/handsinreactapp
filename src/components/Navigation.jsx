@@ -1,42 +1,59 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../images/HandShortLogo.png';
+import { auth, db } from '../firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { doc, getDoc } from 'firebase/firestore';
+import logo from '../images/HandShortLogo.png'; // use your logo file
 
-const Navigation = ({ currentPage }) => {
+function Navigation({ currentPage }) {
+  const [user] = useAuthState(auth);
+  const [username, setUsername] = useState(null);
+
+  useEffect(() => {
+    const getUsername = async () => {
+      if (user) {
+        const docRef = doc(db, 'users', user.uid);
+        const userDoc = await getDoc(docRef);
+        if (userDoc.exists()) {
+          setUsername(userDoc.data().username);
+        }
+      } else {
+        setUsername(null);
+      }
+    };
+    getUsername();
+  }, [user]);
+
   return (
-    <nav className="simple-nav">
-      {/* Logo linking to home */}
+  <div className="simple-nav">
+    <div className="nav-left">
       <Link to="/">
-        <img
-          src={logo}
-          alt="Hands In Logo"
-          style={{
-            height: '70px',
-            verticalAlign: 'middle',
-            marginRight: '20px'
-          }}
-        />
+        <img src={logo} alt="Logo" className="nav-logo-img" />
       </Link>
+    </div>
+  
+    <div className="nav-right">
+      <div className="nav-links">
+        <Link to="/">Home</Link>
+        <Link to="/blog">Blog</Link>
+        <Link to="/about">About Us</Link>
+      </div>
 
-      {/* Navigation links */}
-      <span> | </span>
-      {currentPage !== 'about' && (
-        <>
-          <Link to="/about">About</Link>
-          <span> | </span>
-        </>
-      )}
-      {currentPage !== 'blog' && (
-        <>
-          <Link to="/blog">Blog</Link>
-          <span> | </span>
-        </>
-      )}
-      {currentPage !== 'signup' && (
-        <Link to="/signup">Sign Up</Link>
-      )}
-    </nav>
+      <div className="nav-auth">
+          {user ? (
+            <Link to="/dashboard" className="username-box" style={{ textDecoration: 'none', color: 'white' }}>
+              {username || user.email}
+            </Link>
+          ) : (
+            <Link to="/signup" className="username-box">Sign Up</Link>
+          )}
+        </div>
+
+    </div>
+
+  </div>
+  
   );
-};
+}
 
 export default Navigation;

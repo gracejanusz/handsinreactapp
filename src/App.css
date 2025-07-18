@@ -20,7 +20,7 @@
 
 .App-header2 {
   background-color: #2d5cb2;
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +39,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.subtitle-home{
+
+.subtitle-home {
   font-family: 'Trebuchet MS', serif;
   font-size: 24px;
   font-weight: 600;
@@ -60,55 +61,209 @@
   min-height: 100vh;
 }
 
+.feature-page {
+  min-height: 70vh;
+}
+
 .page main {
   padding: 20px;
   text-align: center;
 }
 
-/* Navigation */
+.home-container {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3161c5;
+  color: white;
+  padding: 80px 40px;
+}
+
+.hero-section {
+  background-color: #2d5cb2;
+  padding-bottom: 40px; 
+  position: relative;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-image img {
+  width: 500px;
+  max-width: 100%;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 40px;
+  background-color: #144aa3;
+  border-radius: 20px;
+  max-width: 1100px;
+  margin: 60px auto; /* centers the box */
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card {
+  background: none; /* remove card background so container provides it */
+  text-align: center;
+  flex: 1;
+}
+
+.feature-card img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #dce9ff;
+  padding: 0 10px;
+}
+
+.features-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.features-image {
+  width: 100%;
+  max-width: 1300px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-section {
+  background-color: #2d5cb2;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.features-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: -60px; /* shifts it up into the blue section */
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+.features-image {
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(80%); /* half on blue, half on white */
+  z-index: 10;
+  background: white;
+}
+
+.below-section {
+  background-color: F5F5F5;
+  padding-top: 100px; /* spacing for the overlap */
+}
+
+
+
+/* ------------------------- */
+/*        Navigation         */
+/* ------------------------- */
+
+.simple-nav {
+  padding: 20px 40px;
+  background: #1e3a8a;
+  margin-bottom: 0;
+  font-family: 'Trebuchet MS', serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-img {
+  height: 64px;
+}
 
 .nav-links {
   display: flex;
-  gap: 4em; 
-  margin-top: 10px;
+  padding-left: 2em;
+  margin-left: 2em;
+  align-items: center;
+
 }
 
-.simple-nav {
-  padding: 20px;
-  text-align: left;
-  background: #133470;
-  margin-bottom: 0; 
-  font-family: 'Trebuchet MS', serif;
+.home-nav-links {
+  display: flex;
+  padding-left: 2em;
+  padding-right: 2em;
+  align-items: center;
+  
 }
 
 .simple-nav a {
   text-decoration: none;
   color: #ecfbff;
   margin: 0 10px;
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'Trebuchet MS', serif;
-  vertical-align: 'middle';
+  vertical-align: middle;
 }
 
 .simple-nav a:hover {
   text-decoration: underline;
-  font-family: 'Trebuchet MS', serif;
-}
-
-.simple-nav span {
-  color: #61dafb;
 }
 
 .simple-nav a:visited {
   color: #ecfbff;
 }
 
+.simple-nav span {
+  color: #61dafb;
+}
+
 .nav-button {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 10px 24px;
   margin: 8px;
-  background-color: #ecfbff; 
-  color: #133470; 
+  background-color: #ecfbff;
+  color: #133470;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
@@ -119,26 +274,73 @@
 }
 
 .nav-button:hover {
-  background-color: #ecfbff; 
-  border: 2px solid #1e3a8a; 
-  transform: translateY(-2px); 
+  background-color: #ecfbff;
+  border: 2px solid #1e3a8a;
+  transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(30, 58, 138, 0.2);
 }
 
 .nav-button:active {
-  transform: translateY(0); 
+  transform: translateY(0);
   box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2);
 }
 
-/* Footers */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2em; /* adds spacing between the links and the auth box */
+}
+
+/* Sign Up button (on the right) */
+.nav-signup {
+  background-color: #1e3a8a;
+  color: #ecfbff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: 2px solid #ecfbff;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  padding-left: 4em;
+}
+
+.nav-signup:hover {
+  background-color: #ecfbff;
+  color: #1e3a8a;
+  transform: translateY(-2px);
+}
+
+/* Username box when logged in */
+.username-box {
+  background-color: transparent;
+  border: 2px solid #ecfbff;
+  color: #ecfbff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', serif;
+}
+
+/* ------------------------- */
+/*          Footer           */
+/* ------------------------- */
 
 .footer-container {
   background-color: #1e3a8a;
-  color: #f5f5dc; 
+  color: #f5f5dc;
   padding: 40px 0;
   margin-top: 50px auto;
   text-align: left;
+  align-items: center; /* <--- This vertically centers all items */
+  justify-content: space-between;
   font-size: 18px;
+}
+
+.footer-section.logo {
+  display: flex;
+  align-items: center; /* ensures the logo image aligns vertically */
 }
 
 .footer-content {
@@ -156,7 +358,9 @@
   margin: 0;
 }
 
-/* Blog Cards */
+/* ------------------------- */
+/*         Blog Cards        */
+/* ------------------------- */
 
 .blog-card {
   display: flex;
@@ -165,7 +369,7 @@
   border-radius: 8px;
   overflow: hidden;
   margin: 20px auto;
-  max-width: 1000px;
+  width: 1000px;
   padding: 40px;
   align-items: center;
   justify-content: space-between;
@@ -224,23 +428,32 @@
   object-fit: contain;
 }
 
-/* About */
+/* ------------------------- */
+/*           About           */
+/* ------------------------- */
 
 .about-page {
-  background-color: #2d5cb2;
+  background-color: #1e3a8a;
   color: #f3f3f3;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .about-container {
   width: 100%;
+  align-content: center;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 60px 20px;
   text-align: left;
-  flex-grow: 1; 
+  flex-grow: 1;
+}
+
+.carousel .slide img {
+  width: 100%;
+  object-fit: cover;
 }
 
 h1 {
@@ -256,6 +469,7 @@ h1 {
   color: #ebe9e9;
   margin-bottom: 40px;
   font-family: 'Trebuchet MS', serif;
+  text-align: center;
 }
 
 section {
@@ -285,16 +499,21 @@ li {
   margin-bottom: 8px;
 }
 
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
+.team-section-wrapper {
+  background-color: #2d5cb2;
+  padding: 60px 20px;
+  width: 100%;
 }
 
-li {
-  margin-bottom: 8px;
+.team-section-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* TEAM SECTIONS */
+
+/* ------------------------- */
+/*         Team Grid         */
+/* ------------------------- */
 
 .team-section {
   text-align: center;
@@ -305,7 +524,7 @@ li {
   display: flex;
   justify-content: center;
   gap: 40px;
-  flex-wrap: wrap; /* allows responsiveness on small screens */
+  flex-wrap: wrap;
   margin-top: 40px;
 }
 
@@ -313,19 +532,22 @@ li {
   background-color: #ffffff;
   color: #1e3a8a;
   padding: 20px;
-  border-radius: 12px;
-  width: 260px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  border-radius: 16px;
+  width: 330px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0; /* Optional subtle border */
 }
 
 .team-member:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+
 
 .team-member img {
   width: 100%;
-  height: 240px;
+  height: 280px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -345,3 +567,162 @@ li {
   font-size: 20px;
   color: #1e3a8a;
 }
+
+.course-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+  line-height: 1.4;
+  font-family: 'Trebuchet MS', serif;
+  text-align: left;
+}
+
+.join-course-button {
+  display: inline-block;
+  background-color: #ff6a00;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.join-course-button:hover {
+  background-color: #e25800;
+}
+
+/* CalendarStyles.css */
+.react-calendar__tile.highlight {
+  background: #2563eb !important;
+  color: white !important;
+  border-radius: 6px;
+}
+
+/* CalendarStyles.css */
+.custom-calendar {
+  border: none;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  max-width: 320px;
+}
+
+.custom-calendar .react-calendar__navigation {
+  background-color: #2563eb;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.custom-calendar .react-calendar__navigation button {
+  color: white;
+  font-weight: bold;
+}
+
+.custom-calendar .react-calendar__month-view__weekdays {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.custom-calendar .react-calendar__tile {
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.custom-calendar .react-calendar__tile:hover {
+  background: #e0ecff;
+}
+
+.custom-calendar .react-calendar__tile--now {
+  background: #bfdbfe;
+  color: black;
+  font-weight: bold;
+}
+
+.custom-calendar .react-calendar__tile.highlight {
+  background: #2563eb !important;
+  color: white !important;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.react-calendar__tile.highlight {
+  background: #facc15 !important; /* a nice yellow highlight */
+  color: black !important;
+  border-radius: 8px;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: transparent !important;
+  color: inherit !important;
+  cursor: default;
+}
+
+.react-calendar__tile {
+  pointer-events: none;
+}
+
+.react-calendar__tile {
+  cursor: default;
+}
+
+.react-calendar__navigation {
+  pointer-events: none;
+  background: none;
+  box-shadow: none;
+}
+
+.react-calendar__navigation__label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: default;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background: none !important;
+}
+
+.streak-day {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin: 0 auto 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.sidebar-link {
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sidebar-link:hover {
+  background-color: white;
+  color: #0f52ba;
+}
+
+.lesson-phase {
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.primary-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+

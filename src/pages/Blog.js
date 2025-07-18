@@ -1,9 +1,9 @@
 import React from 'react';
-import Footer from './components/Footer.jsx'
-import Navigation from './components/Navigation.jsx';
-import ProjectCard from './components/ProjectCard';
-import thumbImg from './images/100days.png'; 
-import HackteckImg from './images/HackTech.png';
+import Footer from '../components/Footer.jsx'
+import Navigation from '../components/Navigation.jsx';
+import ProjectCard from '../components/ProjectCard.jsx';
+import thumbImg from '../images/100days.png'; 
+import HackteckImg from '../images/HackTech.png';
 
 
 function Blog() {
