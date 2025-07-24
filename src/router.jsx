@@ -7,7 +7,8 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
-import Settings from './pages/Settings'
+import Settings from './pages/Settings';
+import Courses from './pages/Courses';
 
 import LessonFlow from './pages/LessonFlow';
 
@@ -22,6 +23,7 @@ const AppRouter = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/courses" element={< Courses/>} />
 
         {/* Learning flow routes */}
         <Route path="/lesson/test" element={<LessonFlow />} />

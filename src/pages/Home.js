@@ -133,7 +133,7 @@ function Home() {
                 </div>
 
                 <div style={{ textAlign: 'center' }}>
-                  <Link to={user ? "/dashboard" : "/signup"} style={{ textDecoration: 'none' }}>
+                  <Link to={user ? "/courses" : "/signup"} style={{ textDecoration: 'none' }}>
                     <button className="nav-button" style={{
                       backgroundColor: '#f97316',
                       color: 'white',
